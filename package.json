@@ -1,0 +1,37 @@
+{
+  "name": "multiple-entrypoints-preconstruct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/multiple-entrypoints-preconstruct.cjs.js",
+  "module": "dist/multiple-entrypoints-preconstruct.esm.js",
+  "scripts": {
+    "build": "preconstruct build",
+    "release": "yarn build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kajitaku/multiple-entrypoints-preconstruct.git"
+  },
+  "keywords": [],
+  "author": "Takuya Kajiyama <dev.kajiyama@gmail.com> (https://github.com/Kajitaku)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kajitaku/multiple-entrypoints-preconstruct/issues"
+  },
+  "homepage": "https://github.com/Kajitaku/multiple-entrypoints-preconstruct#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@preconstruct/cli": "^2.0.4"
+  },
+  "preconstruct": {
+    "entrypoints": [
+      "index.js",
+      "create.js"
+    ]
+  },
+  "files": [
+    "dist",
+    "create"
+  ]
+}
